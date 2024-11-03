@@ -1,31 +1,54 @@
 //1
 
+// const choice = prompt("Кава, Чай чи Сік?").toLowerCase();
+
+// switch (choice) {
+//     case "кава":
+//         alert("Ви обрали каву. Насолоджуйтесь!");
+//         break;
+//     case "чай":
+//         alert("Ви обрали чай. Чудовий вибір!");
+//         break;
+//     case "сік":
+//         alert("Ви обрали сік. Смачного!");
+//         break;
+//     default:
+//         alert("Будь ласка, оберіть з запропонованих варіантів: Кава, Чай або Сік.");
+// }
 //2
 
-// const week = prompt("Введіть день тиждня").toLowerCase()
+// const week = prompt("Введіть день тиждня").toLowerCase();
 
-// if (week === "Понеділок".toLowerCase() || week === "Вівторок".toLowerCase() || week === "Середа".toLowerCase() || week === "четверг".toLowerCase() || week === "П`ятниця".toLowerCase()) {
-//     alert("це робочий день")
-// } else if (week === "субота".toLowerCase() || week === "неділя".toLowerCase()) {
-//     alert("це вихідний день")
+// const workingDays = ["понеділок", "вівторок", "середа", "четвер", "п'ятниця"];
+// const weekendDays = ["субота", "неділя"];
+
+// if (workingDays.includes(week)) {
+//     alert("це робочий день");
+// } else if (weekendDays.includes(week)) {
+//     alert("це вихідний день");
 // } else {
-//     alert("те що ви вписали не є днем тиждня")
+//     alert("те що ви вписали не є днем тиждня");
 // }
 
 //3
 
-// const month = Number(prompt("Введіть номер місяця в році від 1 до 12"))
+// const month = Number(prompt("Введіть номер місяця в році від 1 до 12"));
 
-// if (month === 1 || month === 2 || month === 12) {
-//     alert("це зима")
-// } else if (month === 3 || month === 4 || month === 5) {
-//     alert("це весна")
-// } else if (month === 6 || month === 7 || month === 8) {
-//     alert("це літо")
-// }else if (month === 9 || month === 10 || month === 11) {
-//     alert("це осінь")
-// }else {
-//     alert("те що ви вписали не є номерацією місяця")
+// switch (true) {
+//     case (month === 12 || month === 1 || month === 2):
+//         alert("це зима");
+//         break;
+//     case (month >= 3 && month <= 5):
+//         alert("це весна");
+//         break;
+//     case (month >= 6 && month <= 8):
+//         alert("це літо");
+//         break;
+//     case (month >= 9 && month <= 11):
+//         alert("це осінь");
+//         break;
+//     default:
+//         alert("те що ви вписали не є номерацією місяця");
 // }
 
 //4
@@ -92,48 +115,46 @@
 
 // const color = prompt("Введіть колір").toLowerCase()
 
-// if (color === "червоний".toLowerCase()) {
-//     alert("червоний значить - стій")
-// } else if (color === "жовтий".toLowerCase()) {
-//     alert("жовтий значить - чекай")
-// }else if (color === "зелений".toLowerCase()) {
-//     alert("зелений значить - йти")
-// } else {
-//     alert(`ваш колір ${color} 😱😱😱`)
+
+// switch (color) {
+//     case "червоний":
+//         alert("червоний значить - стій");
+//         break;
+//     case "жовтий":
+//         alert("жовтий значить - чекай");
+//         break;
+//     case "зелений":
+//         alert("зелений значить - йти");
+//         break;
+//     default:
+//         alert(`ваш колір ${color} 😱😱😱`);
 // }
 
 //6
 
-const numberOne = Number(prompt("Введіть число 1"))
-const numberTwo = Number(prompt("Введіть число 2"))
+// const numberOne = Number(prompt("Введіть число 1"));
+// const numberTwo = Number(prompt("Введіть число 2"));
 
-if (numberOne === 0 && numberTwo === 0) {
-    const math = prompt("варіантами вибору операцій: +, -, *, /.")
-    if( math === "+") {
-    alert(numberOne + numberTwo)
-    } else if ( math === "-") {
-        alert(numberOne - numberTwo)
-    } else if ( math === "*") {
-        alert(numberOne * numberTwo)
-    } else if ( math === "/") {
-        alert(numberOne / numberTwo)
-    } else if ( math === "%") {
-        alert("не смішно")
-    } else {
-        alert("БУДЬ ЛАСКА ПРАВИЛЬНО")
-    }
-} else {
-    const math = prompt("варіантами вибору операцій: +, -, *.") 
-    if( math === "+") {
-        alert(numberOne + numberTwo)
-        } else if ( math === "-") {
-            alert(numberOne - numberTwo)
-        } else if ( math === "*") {
-            alert(numberOne * numberTwo)
-        } else if ( math === "/") {
-            alert(numberOne / numberTwo)
-        } else {
-            alert("БУДЬ ЛАСКА ПРАВИЛЬНО")
-        }
-}
+// function calculate(numberOne, numberTwo, operation) {
+//     switch (operation) {
+//         case "+":
+//             return numberOne + numberTwo;
+//         case "-":
+//             return numberOne - numberTwo;
+//         case "*":
+//             return numberOne * numberTwo;
+//         case "/":
+//             return numberTwo !== 0 ? numberOne / numberTwo : "Ділення на нуль неможливе";
+//         case "%":
+//             return "не смішно";
+//         default:
+//             return "будь ласка робіть за правилам";
+//     }
+// }
+
+// let allowedOperations = (numberOne === 0 && numberTwo === 0) ? "+, -, *, /, %" : "+, -, *";
+// const math = prompt(`Варіантами вибору операцій: ${allowedOperations}`);
+
+// alert(calculate(numberOne, numberTwo, math));     
+
 
